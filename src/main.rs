@@ -9,7 +9,7 @@ enum MyError {
     IoError(#[from] std::io::Error),
 }
 
-// 構造
+// 構造体の定義
 #[derive(Debug, Deserialize, Serialize)]
 #[serde(rename_all = "PascalCase")]
 struct MyRecord {
@@ -67,7 +67,7 @@ fn main() -> Result<(), MyError> {
             }
         }
     }
-    //* csv書き込む *//
+    //* csv書き込み *//
     {
         //structの型を指定して書き込む
         {
